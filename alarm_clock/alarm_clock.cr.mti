@@ -1,0 +1,32 @@
+{F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/alarm_clock.vhd} {0 {vcom -work work -2002 -explicit -stats=none {F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/alarm_clock.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+** Error: (vcom-11) Could not find work.alarm_clock_package.
+** Error (suppressible): F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/alarm_clock.vhd(3): (vcom-1195) Cannot find expanded name "work.alarm_clock_package".
+** Error: F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/alarm_clock.vhd(3): Unknown expanded name.
+** Error: F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/alarm_clock.vhd(8): VHDL Compiler exiting
+
+} {6.0 7.0 8.0 10.0} {}} {F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/alarm_clock_tb.vhd} {1 {vcom -work work -2002 -explicit -stats=none {F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/alarm_clock_tb.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package alarm_clock_package
+-- Compiling entity alarm_clock_tb
+-- Compiling architecture alarm_clock_tb_arch of alarm_clock_tb
+
+} {} {}} {F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/alarm_clock_package.vhd} {0 {vcom -work work -2002 -explicit -stats=none {F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/alarm_clock_package.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling package alarm_clock_package
+-- Compiling package body alarm_clock_package
+-- Loading package alarm_clock_package
+** Error: F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/alarm_clock_package.vhd(15): (vcom-1360) Array type of "F" does not have an index constraint.
+** Error: F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/alarm_clock_package.vhd(51): Attribute "EVENT" requires a static signal prefix.
+** Error: F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/alarm_clock_package.vhd(61): VHDL Compiler exiting
+
+} {9.0 12.0} {}}

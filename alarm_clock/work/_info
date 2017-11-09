@@ -1,0 +1,73 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/intelFPGA/17.0/modelsim_ase/win32aloem
+Palarm_clock_package
+Z0 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z1 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+w1510263120
+Z2 dF:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock
+8F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/alarm_clock_package.vhd
+FF:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/alarm_clock_package.vhd
+l0
+L4
+V;5P]RX2K?a?oaeR`Sm<l=0
+!s100 iD:dmT>zXJdQ`K8[S6iEn3
+Z3 OV;C;10.5b;63
+32
+b1
+!s110 1510264754
+!i10b 1
+!s108 1510264754.000000
+!s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/alarm_clock_package.vhd|
+!s107 F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/alarm_clock_package.vhd|
+!i113 1
+Z4 o-work work -2002 -explicit
+Z5 tExplicit 1 CvgOpt 0
+Ealarm_clock_tb
+Z6 w1510263584
+Z7 DPx4 work 19 alarm_clock_package 0 22 ;5P]RX2K?a?oaeR`Sm<l=0
+R0
+R1
+R2
+Z8 8F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/alarm_clock_tb.vhd
+Z9 FF:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/alarm_clock_tb.vhd
+l0
+L5
+VzK4J6KK<9zYW`=P>`Fo@J2
+!s100 93PYhAgiV`aD`=Qh_7zCH2
+R3
+32
+Z10 !s110 1510264755
+!i10b 1
+Z11 !s108 1510264755.000000
+Z12 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/alarm_clock_tb.vhd|
+Z13 !s107 F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/alarm_clock_tb.vhd|
+!i113 1
+R4
+R5
+Aalarm_clock_tb_arch
+R7
+R0
+R1
+DEx4 work 14 alarm_clock_tb 0 22 zK4J6KK<9zYW`=P>`Fo@J2
+l23
+L8
+Vlfm5z89nngQ3cWUkO67mk0
+!s100 o6P]UEPnQ]4gCMC5G2SA:3
+R3
+32
+R10
+!i10b 1
+R11
+R12
+R13
+!i113 1
+R4
+R5
