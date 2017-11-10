@@ -1,5 +1,5 @@
-Analysis & Elaboration report for alarm_clock
-Thu Nov 09 22:54:21 2017
+Analysis & Synthesis report for alarm_clock
+Fri Nov 10 11:31:51 2017
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -7,14 +7,22 @@ Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 ; Table of Contents ;
 ---------------------
   1. Legal Notice
-  2. Analysis & Elaboration Summary
-  3. Parallel Compilation
-  4. Analysis & Elaboration Settings
-  5. Port Connectivity Checks: "debounce:min_btn"
-  6. Port Connectivity Checks: "debounce:hour_btn"
-  7. Port Connectivity Checks: "debounce:clock_btn"
-  8. Port Connectivity Checks: "debounce:alarm_btn"
-  9. Analysis & Elaboration Messages
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Registers Removed During Synthesis
+  9. General Register Statistics
+ 10. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 11. Port Connectivity Checks: "debounce:min_btn"
+ 12. Port Connectivity Checks: "debounce:hour_btn"
+ 13. Port Connectivity Checks: "debounce:clock_btn"
+ 14. Port Connectivity Checks: "debounce:alarm_btn"
+ 15. Post-Synthesis Netlist Statistics for Top Partition
+ 16. Elapsed Time Per Partition
+ 17. Analysis & Synthesis Messages
 
 
 
@@ -39,43 +47,27 @@ agreement for further details.
 
 
 +----------------------------------------------------------------------------------+
-; Analysis & Elaboration Summary                                                   ;
+; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Elaboration Status      ; Successful - Thu Nov 09 22:54:21 2017       ;
+; Analysis & Synthesis Status        ; Successful - Fri Nov 10 11:31:51 2017       ;
 ; Quartus Prime Version              ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; alarm_clock                                 ;
 ; Top-level Entity Name              ; alarm_clock                                 ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; N/A until Partition Merge                   ;
-;     Total combinational functions  ; N/A until Partition Merge                   ;
-;     Dedicated logic registers      ; N/A until Partition Merge                   ;
-; Total registers                    ; N/A until Partition Merge                   ;
-; Total pins                         ; N/A until Partition Merge                   ;
-; Total virtual pins                 ; N/A until Partition Merge                   ;
-; Total memory bits                  ; N/A until Partition Merge                   ;
-; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                   ;
-; Total PLLs                         ; N/A until Partition Merge                   ;
+; Total logic elements               ; 131                                         ;
+;     Total combinational functions  ; 131                                         ;
+;     Dedicated logic registers      ; 54                                          ;
+; Total registers                    ; 54                                          ;
+; Total pins                         ; 51                                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
 +------------------------------------+---------------------------------------------+
 
 
-+------------------------------------------+
-; Parallel Compilation                     ;
-+----------------------------+-------------+
-; Processors                 ; Number      ;
-+----------------------------+-------------+
-; Number detected on machine ; 4           ;
-; Maximum allowed            ; 4           ;
-;                            ;             ;
-; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
-;                            ;             ;
-; Usage by Processor         ; % Time Used ;
-;     Processor 1            ; 100.0%      ;
-+----------------------------+-------------+
-
-
 +----------------------------------------------------------------------------------------------------------------------+
-; Analysis & Elaboration Settings                                                                                      ;
+; Analysis & Synthesis Settings                                                                                        ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                                     ; Setting            ; Default Value      ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
@@ -160,6 +152,112 @@ agreement for further details.
 +----------------------------------------------------------------------------+--------------------+--------------------+
 
 
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 6           ;
+; Maximum allowed            ; 6           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 6           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-6         ;   0.0%      ;
++----------------------------+-------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                          ;
++----------------------------------+-----------------+-----------------+------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                   ; Library ;
++----------------------------------+-----------------+-----------------+------------------------------------------------------------------------------------------------+---------+
+; alarm_clock.vhd                  ; yes             ; User VHDL File  ; E:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/alarm_clock.vhd         ;         ;
+; alarm_clock_package.vhd          ; yes             ; User VHDL File  ; E:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/alarm_clock_package.vhd ;         ;
+; debounce.vhd                     ; yes             ; User VHDL File  ; E:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/debounce.vhd            ;         ;
++----------------------------------+-----------------+-----------------+------------------------------------------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                     ;
++---------------------------------------------+-------------------+
+; Resource                                    ; Usage             ;
++---------------------------------------------+-------------------+
+; Estimated Total logic elements              ; 131               ;
+;                                             ;                   ;
+; Total combinational functions               ; 131               ;
+; Logic element usage by number of LUT inputs ;                   ;
+;     -- 4 input functions                    ; 61                ;
+;     -- 3 input functions                    ; 29                ;
+;     -- <=2 input functions                  ; 41                ;
+;                                             ;                   ;
+; Logic elements by mode                      ;                   ;
+;     -- normal mode                          ; 101               ;
+;     -- arithmetic mode                      ; 30                ;
+;                                             ;                   ;
+; Total registers                             ; 54                ;
+;     -- Dedicated logic registers            ; 54                ;
+;     -- I/O registers                        ; 0                 ;
+;                                             ;                   ;
+; I/O pins                                    ; 51                ;
+;                                             ;                   ;
+; Embedded Multiplier 9-bit elements          ; 0                 ;
+;                                             ;                   ;
+; Maximum fan-out node                        ; clock_50MHz~input ;
+; Maximum fan-out                             ; 54                ;
+; Total fan-out                               ; 632               ;
+; Average fan-out                             ; 2.20              ;
++---------------------------------------------+-------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                      ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
+; |alarm_clock               ; 131 (131)           ; 54 (54)                   ; 0           ; 0            ; 0       ; 0         ; 51   ; 0            ; |alarm_clock        ; alarm_clock ; work         ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++--------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                             ;
++---------------------------------------+----------------------------------------+
+; Register name                         ; Reason for Removal                     ;
++---------------------------------------+----------------------------------------+
+; minutes_tens[3]                       ; Stuck at GND due to stuck port data_in ;
+; seconds_tens[3]                       ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 2 ;                                        ;
++---------------------------------------+----------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 54    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 18    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |alarm_clock|hours_tens[2] ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |alarm_clock|hours_ones[3] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+
+
 +---------------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "debounce:min_btn"                                                                        ;
 +-----------+--------+----------+-------------------------------------------------------------------------------------+
@@ -196,76 +294,93 @@ agreement for further details.
 +-----------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+---------------------------------+
-; Analysis & Elaboration Messages ;
-+---------------------------------+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 51                          ;
+; cycloneiii_ff         ; 54                          ;
+;     ENA               ; 18                          ;
+;     plain             ; 36                          ;
+; cycloneiii_lcell_comb ; 138                         ;
+;     arith             ; 30                          ;
+;         2 data inputs ; 30                          ;
+;     normal            ; 108                         ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 7                           ;
+;         2 data inputs ; 10                          ;
+;         3 data inputs ; 29                          ;
+;         4 data inputs ; 61                          ;
+;                       ;                             ;
+; Max LUT depth         ; 11.50                       ;
+; Average LUT depth     ; 6.32                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:01     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
 Info: *******************************************************************
-Info: Running Quartus Prime Analysis & Elaboration
+Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
-    Info: Processing started: Thu Nov 09 22:54:10 2017
-Info: Command: quartus_map --read_settings_files=on --write_settings_files=off alarm_clock -c alarm_clock --analysis_and_elaboration
+    Info: Processing started: Fri Nov 10 11:31:30 2017
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off alarm_clock -c alarm_clock
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file alarm_clock.vhd
-    Info (12022): Found design unit 1: alarm_clock-alarm_clock_arch File: F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/alarm_clock.vhd Line: 23
-    Info (12023): Found entity 1: alarm_clock File: F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/alarm_clock.vhd Line: 8
+    Info (12022): Found design unit 1: alarm_clock-alarm_clock_arch File: E:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/alarm_clock.vhd Line: 23
+    Info (12023): Found entity 1: alarm_clock File: E:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/alarm_clock.vhd Line: 8
 Info (12021): Found 2 design units, including 0 entities, in source file alarm_clock_package.vhd
-    Info (12022): Found design unit 1: alarm_clock_package File: F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/alarm_clock_package.vhd Line: 4
-    Info (12022): Found design unit 2: alarm_clock_package-body File: F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/alarm_clock_package.vhd Line: 28
+    Info (12022): Found design unit 1: alarm_clock_package File: E:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/alarm_clock_package.vhd Line: 4
+    Info (12022): Found design unit 2: alarm_clock_package-body File: E:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/alarm_clock_package.vhd Line: 27
 Info (12021): Found 2 design units, including 1 entities, in source file debounce.vhd
-    Info (12022): Found design unit 1: debounce-debounce_arch File: F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/debounce.vhd Line: 11
-    Info (12023): Found entity 1: debounce File: F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/debounce.vhd Line: 5
+    Info (12022): Found design unit 1: debounce-debounce_arch File: E:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/debounce.vhd Line: 11
+    Info (12023): Found entity 1: debounce File: E:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/debounce.vhd Line: 5
 Info (12127): Elaborating entity "alarm_clock" for the top level hierarchy
-Warning (10541): VHDL Signal Declaration warning at alarm_clock.vhd(12): used implicit default value for signal "alarm" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/alarm_clock.vhd Line: 12
-Warning (10541): VHDL Signal Declaration warning at alarm_clock.vhd(13): used implicit default value for signal "am_pm" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/alarm_clock.vhd Line: 13
-Warning (10036): Verilog HDL or VHDL warning at alarm_clock.vhd(28): object "db_alarm_set" assigned a value but never read File: F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/alarm_clock.vhd Line: 28
-Warning (10036): Verilog HDL or VHDL warning at alarm_clock.vhd(28): object "db_clock_set" assigned a value but never read File: F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/alarm_clock.vhd Line: 28
-Warning (10036): Verilog HDL or VHDL warning at alarm_clock.vhd(28): object "db_hour_set" assigned a value but never read File: F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/alarm_clock.vhd Line: 28
-Warning (10036): Verilog HDL or VHDL warning at alarm_clock.vhd(28): object "db_minute_set" assigned a value but never read File: F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/alarm_clock.vhd Line: 28
-Warning (10036): Verilog HDL or VHDL warning at alarm_clock.vhd(34): object "clock_time" assigned a value but never read File: F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/alarm_clock.vhd Line: 34
-Warning (10540): VHDL Signal Declaration warning at alarm_clock.vhd(36): used explicit default value for signal "alarm_minutes_ones" because signal was never assigned a value File: F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/alarm_clock.vhd Line: 36
-Warning (10540): VHDL Signal Declaration warning at alarm_clock.vhd(36): used explicit default value for signal "alarm_minutes_tens" because signal was never assigned a value File: F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/alarm_clock.vhd Line: 36
-Warning (10540): VHDL Signal Declaration warning at alarm_clock.vhd(36): used explicit default value for signal "alarm_hours_ones" because signal was never assigned a value File: F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/alarm_clock.vhd Line: 36
-Warning (10540): VHDL Signal Declaration warning at alarm_clock.vhd(36): used explicit default value for signal "alarm_hours_tens" because signal was never assigned a value File: F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/alarm_clock.vhd Line: 36
-Warning (10036): Verilog HDL or VHDL warning at alarm_clock.vhd(38): object "alarm_time" assigned a value but never read File: F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/alarm_clock.vhd Line: 38
-Warning (10492): VHDL Process Statement warning at alarm_clock.vhd(61): signal "hours_tens" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/alarm_clock.vhd Line: 61
-Warning (10492): VHDL Process Statement warning at alarm_clock.vhd(61): signal "hours_ones" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/alarm_clock.vhd Line: 61
-Warning (10492): VHDL Process Statement warning at alarm_clock.vhd(61): signal "minutes_tens" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/alarm_clock.vhd Line: 61
-Warning (10492): VHDL Process Statement warning at alarm_clock.vhd(61): signal "minutes_ones" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/alarm_clock.vhd Line: 61
-Warning (10492): VHDL Process Statement warning at alarm_clock.vhd(61): signal "seconds_tens" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/alarm_clock.vhd Line: 61
-Warning (10492): VHDL Process Statement warning at alarm_clock.vhd(61): signal "seconds_ones" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/alarm_clock.vhd Line: 61
-Warning (10631): VHDL Process Statement warning at alarm_clock.vhd(59): inferring latch(es) for signal or variable "hours_tens", which holds its previous value in one or more paths through the process File: F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/alarm_clock.vhd Line: 59
-Warning (10631): VHDL Process Statement warning at alarm_clock.vhd(59): inferring latch(es) for signal or variable "hours_ones", which holds its previous value in one or more paths through the process File: F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/alarm_clock.vhd Line: 59
-Warning (10631): VHDL Process Statement warning at alarm_clock.vhd(59): inferring latch(es) for signal or variable "minutes_tens", which holds its previous value in one or more paths through the process File: F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/alarm_clock.vhd Line: 59
-Warning (10631): VHDL Process Statement warning at alarm_clock.vhd(59): inferring latch(es) for signal or variable "minutes_ones", which holds its previous value in one or more paths through the process File: F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/alarm_clock.vhd Line: 59
-Warning (10631): VHDL Process Statement warning at alarm_clock.vhd(59): inferring latch(es) for signal or variable "seconds_tens", which holds its previous value in one or more paths through the process File: F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/alarm_clock.vhd Line: 59
-Info (10041): Inferred latch for "seconds_tens[0]" at alarm_clock.vhd(59) File: F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/alarm_clock.vhd Line: 59
-Info (10041): Inferred latch for "seconds_tens[1]" at alarm_clock.vhd(59) File: F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/alarm_clock.vhd Line: 59
-Info (10041): Inferred latch for "seconds_tens[2]" at alarm_clock.vhd(59) File: F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/alarm_clock.vhd Line: 59
-Info (10041): Inferred latch for "seconds_tens[3]" at alarm_clock.vhd(59) File: F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/alarm_clock.vhd Line: 59
-Info (10041): Inferred latch for "minutes_ones[0]" at alarm_clock.vhd(59) File: F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/alarm_clock.vhd Line: 59
-Info (10041): Inferred latch for "minutes_ones[1]" at alarm_clock.vhd(59) File: F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/alarm_clock.vhd Line: 59
-Info (10041): Inferred latch for "minutes_ones[2]" at alarm_clock.vhd(59) File: F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/alarm_clock.vhd Line: 59
-Info (10041): Inferred latch for "minutes_ones[3]" at alarm_clock.vhd(59) File: F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/alarm_clock.vhd Line: 59
-Info (10041): Inferred latch for "minutes_tens[0]" at alarm_clock.vhd(59) File: F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/alarm_clock.vhd Line: 59
-Info (10041): Inferred latch for "minutes_tens[1]" at alarm_clock.vhd(59) File: F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/alarm_clock.vhd Line: 59
-Info (10041): Inferred latch for "minutes_tens[2]" at alarm_clock.vhd(59) File: F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/alarm_clock.vhd Line: 59
-Info (10041): Inferred latch for "minutes_tens[3]" at alarm_clock.vhd(59) File: F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/alarm_clock.vhd Line: 59
-Info (10041): Inferred latch for "hours_ones[0]" at alarm_clock.vhd(59) File: F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/alarm_clock.vhd Line: 59
-Info (10041): Inferred latch for "hours_ones[1]" at alarm_clock.vhd(59) File: F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/alarm_clock.vhd Line: 59
-Info (10041): Inferred latch for "hours_ones[2]" at alarm_clock.vhd(59) File: F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/alarm_clock.vhd Line: 59
-Info (10041): Inferred latch for "hours_ones[3]" at alarm_clock.vhd(59) File: F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/alarm_clock.vhd Line: 59
-Info (10041): Inferred latch for "hours_tens[0]" at alarm_clock.vhd(59) File: F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/alarm_clock.vhd Line: 59
-Info (10041): Inferred latch for "hours_tens[1]" at alarm_clock.vhd(59) File: F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/alarm_clock.vhd Line: 59
-Info (10041): Inferred latch for "hours_tens[2]" at alarm_clock.vhd(59) File: F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/alarm_clock.vhd Line: 59
-Info (10041): Inferred latch for "hours_tens[3]" at alarm_clock.vhd(59) File: F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/alarm_clock.vhd Line: 59
-Info (12128): Elaborating entity "debounce" for hierarchy "debounce:alarm_btn" File: F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/alarm_clock.vhd Line: 50
-Warning (10631): VHDL Process Statement warning at debounce.vhd(17): inferring latch(es) for signal or variable "old_btn", which holds its previous value in one or more paths through the process File: F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/debounce.vhd Line: 17
-Info (10041): Inferred latch for "old_btn" at debounce.vhd(23) File: F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/debounce.vhd Line: 23
-Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 25 warnings
-    Info: Peak virtual memory: 662 megabytes
-    Info: Processing ended: Thu Nov 09 22:54:21 2017
-    Info: Elapsed time: 00:00:11
-    Info: Total CPU time (on all processors): 00:00:20
+Warning (10541): VHDL Signal Declaration warning at alarm_clock.vhd(12): used implicit default value for signal "alarm" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: E:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/alarm_clock.vhd Line: 12
+Warning (10036): Verilog HDL or VHDL warning at alarm_clock.vhd(28): object "db_alarm_set" assigned a value but never read File: E:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/alarm_clock.vhd Line: 28
+Warning (10036): Verilog HDL or VHDL warning at alarm_clock.vhd(28): object "db_clock_set" assigned a value but never read File: E:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/alarm_clock.vhd Line: 28
+Warning (10036): Verilog HDL or VHDL warning at alarm_clock.vhd(28): object "db_hour_set" assigned a value but never read File: E:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/alarm_clock.vhd Line: 28
+Warning (10036): Verilog HDL or VHDL warning at alarm_clock.vhd(28): object "db_minute_set" assigned a value but never read File: E:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/alarm_clock.vhd Line: 28
+Warning (10492): VHDL Process Statement warning at alarm_clock.vhd(98): signal "hours_tens" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/alarm_clock.vhd Line: 98
+Warning (10492): VHDL Process Statement warning at alarm_clock.vhd(99): signal "hours_ones" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/alarm_clock.vhd Line: 99
+Warning (10492): VHDL Process Statement warning at alarm_clock.vhd(100): signal "minutes_tens" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/alarm_clock.vhd Line: 100
+Warning (10492): VHDL Process Statement warning at alarm_clock.vhd(101): signal "minutes_ones" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/alarm_clock.vhd Line: 101
+Warning (10492): VHDL Process Statement warning at alarm_clock.vhd(102): signal "seconds_tens" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/alarm_clock.vhd Line: 102
+Warning (10492): VHDL Process Statement warning at alarm_clock.vhd(103): signal "seconds_ones" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/alarm_clock.vhd Line: 103
+Info (12128): Elaborating entity "debounce" for hierarchy "debounce:alarm_btn" File: E:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/alarm_clock.vhd Line: 52
+Warning (10631): VHDL Process Statement warning at debounce.vhd(17): inferring latch(es) for signal or variable "old_btn", which holds its previous value in one or more paths through the process File: E:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/debounce.vhd Line: 17
+Info (10041): Inferred latch for "old_btn" at debounce.vhd(23) File: E:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/debounce.vhd Line: 23
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "alarm" is stuck at GND File: E:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/alarm_clock.vhd Line: 12
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 6 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "alarm_set" File: E:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/alarm_clock.vhd Line: 10
+    Warning (15610): No output dependent on input pin "clock_set" File: E:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/alarm_clock.vhd Line: 10
+    Warning (15610): No output dependent on input pin "hour_set" File: E:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/alarm_clock.vhd Line: 10
+    Warning (15610): No output dependent on input pin "minute_set" File: E:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/alarm_clock.vhd Line: 10
+    Warning (15610): No output dependent on input pin "alarm_status" File: E:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/alarm_clock.vhd Line: 11
+    Warning (15610): No output dependent on input pin "reset" File: E:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/alarm_clock.vhd Line: 11
+Info (21057): Implemented 207 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 7 input pins
+    Info (21059): Implemented 44 output pins
+    Info (21061): Implemented 156 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 22 warnings
+    Info: Peak virtual memory: 698 megabytes
+    Info: Processing ended: Fri Nov 10 11:31:55 2017
+    Info: Elapsed time: 00:00:25
+    Info: Total CPU time (on all processors): 00:00:37
 
 

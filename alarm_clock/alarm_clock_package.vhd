@@ -3,7 +3,7 @@ USE IEEE.STD_LOGIC_1164.ALL;
 
 PACKAGE alarm_clock_package IS
 -------------------------------------------------------------------------------
-	TYPE my_time IS ARRAY (5 DOWNTO 0) OF NATURAL;
+	TYPE my_time IS ARRAY (7 DOWNTO 2) OF NATURAL;
 -------------------------------------------------------------------------------
 	COMPONENT debounce IS
 		PORT(btn, clk: IN STD_LOGIC;
@@ -18,8 +18,7 @@ PACKAGE alarm_clock_package IS
 										CONSTANT divider: IN NATURAL;
 										SIGNAL op_clock: OUT STD_LOGIC);
 -------------------------------------------------------------------------------
-	PROCEDURE clock_display (SIGNAL clock: IN STD_LOGIC;
-										SIGNAL hours_tens, hours_ones,
+	PROCEDURE clock_increment (SIGNAL hours_tens, hours_ones,
 										minutes_tens, minutes_ones,
 										seconds_tens, seconds_ones: INOUT NATURAL RANGE 0 TO 9);
 -------------------------------------------------------------------------------
@@ -80,8 +79,7 @@ PACKAGE BODY alarm_clock_package IS
 	
 	END PROCEDURE slow_the_clock;
 -------------------------------------------------------------------------------
-	PROCEDURE clock_display (SIGNAL clock: IN STD_LOGIC;
-										SIGNAL hours_tens, hours_ones,
+	PROCEDURE clock_increment (SIGNAL hours_tens, hours_ones,
 										minutes_tens, minutes_ones,
 										seconds_tens, seconds_ones: INOUT NATURAL RANGE 0 TO 9) IS
 
@@ -102,16 +100,16 @@ PACKAGE BODY alarm_clock_package IS
 					IF(hours_ones >= 9) THEN
 						hours_ones <= 0;
 						hours_tens <= hours_tens+1;
-						IF(hours_tens >= 2 AND hours_ones >= 3) THEN
-							hours_tens <= 0;
-							hours_ones <= 0;
-						END IF;
+					END IF;
+					IF(hours_tens >= 2 AND hours_ones >= 3) THEN
+						hours_tens <= 0;
+						hours_ones <= 0;
 					END IF;
 				END IF;
 			END IF;
 		END IF;
 	END IF;
 	
-	END clock_display;
+	END clock_increment;
 -------------------------------------------------------------------------------
 END alarm_clock_package;

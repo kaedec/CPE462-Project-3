@@ -1,0 +1,185 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "am_pm",
+					"strict" : false
+				},
+				{
+					"name" : "hours7[6]",
+					"strict" : false
+				},
+				{
+					"name" : "hours7[5]",
+					"strict" : false
+				},
+				{
+					"name" : "hours7[4]",
+					"strict" : false
+				},
+				{
+					"name" : "hours7[3]",
+					"strict" : false
+				},
+				{
+					"name" : "hours7[2]",
+					"strict" : false
+				},
+				{
+					"name" : "hours7[1]",
+					"strict" : false
+				},
+				{
+					"name" : "hours7[0]",
+					"strict" : false
+				},
+				{
+					"name" : "hours6[6]",
+					"strict" : false
+				},
+				{
+					"name" : "hours6[5]",
+					"strict" : false
+				},
+				{
+					"name" : "hours6[4]",
+					"strict" : false
+				},
+				{
+					"name" : "hours6[3]",
+					"strict" : false
+				},
+				{
+					"name" : "hours6[2]",
+					"strict" : false
+				},
+				{
+					"name" : "hours6[1]",
+					"strict" : false
+				},
+				{
+					"name" : "hours6[0]",
+					"strict" : false
+				},
+				{
+					"name" : "minutes5[6]",
+					"strict" : false
+				},
+				{
+					"name" : "minutes5[5]",
+					"strict" : false
+				},
+				{
+					"name" : "minutes5[4]",
+					"strict" : false
+				},
+				{
+					"name" : "minutes5[3]",
+					"strict" : false
+				},
+				{
+					"name" : "minutes5[2]",
+					"strict" : false
+				},
+				{
+					"name" : "minutes5[1]",
+					"strict" : false
+				},
+				{
+					"name" : "minutes5[0]",
+					"strict" : false
+				},
+				{
+					"name" : "minutes4[6]",
+					"strict" : false
+				},
+				{
+					"name" : "minutes4[5]",
+					"strict" : false
+				},
+				{
+					"name" : "minutes4[4]",
+					"strict" : false
+				},
+				{
+					"name" : "minutes4[3]",
+					"strict" : false
+				},
+				{
+					"name" : "minutes4[2]",
+					"strict" : false
+				},
+				{
+					"name" : "minutes4[1]",
+					"strict" : false
+				},
+				{
+					"name" : "minutes4[0]",
+					"strict" : false
+				},
+				{
+					"name" : "seconds3[6]",
+					"strict" : false
+				},
+				{
+					"name" : "seconds3[5]",
+					"strict" : false
+				},
+				{
+					"name" : "seconds3[4]",
+					"strict" : false
+				},
+				{
+					"name" : "seconds3[3]",
+					"strict" : false
+				},
+				{
+					"name" : "seconds3[2]",
+					"strict" : false
+				},
+				{
+					"name" : "seconds3[1]",
+					"strict" : false
+				},
+				{
+					"name" : "seconds3[0]",
+					"strict" : false
+				},
+				{
+					"name" : "seconds2[6]",
+					"strict" : false
+				},
+				{
+					"name" : "seconds2[5]",
+					"strict" : false
+				},
+				{
+					"name" : "seconds2[4]",
+					"strict" : false
+				},
+				{
+					"name" : "seconds2[3]",
+					"strict" : false
+				},
+				{
+					"name" : "seconds2[2]",
+					"strict" : false
+				},
+				{
+					"name" : "seconds2[1]",
+					"strict" : false
+				},
+				{
+					"name" : "seconds2[0]",
+					"strict" : false
+				},
+				{
+					"name" : "clock_50MHz",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
