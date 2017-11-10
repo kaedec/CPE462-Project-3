@@ -1,5 +1,5 @@
 Analysis & Elaboration report for alarm_clock
-Thu Nov 09 21:44:38 2017
+Thu Nov 09 22:54:21 2017
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -10,12 +10,11 @@ Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
   2. Analysis & Elaboration Summary
   3. Parallel Compilation
   4. Analysis & Elaboration Settings
-  5. Port Connectivity Checks: "clock_display:Display"
-  6. Port Connectivity Checks: "debounce:min_btn"
-  7. Port Connectivity Checks: "debounce:hour_btn"
-  8. Port Connectivity Checks: "debounce:clock_btn"
-  9. Port Connectivity Checks: "debounce:alarm_btn"
- 10. Analysis & Elaboration Messages
+  5. Port Connectivity Checks: "debounce:min_btn"
+  6. Port Connectivity Checks: "debounce:hour_btn"
+  7. Port Connectivity Checks: "debounce:clock_btn"
+  8. Port Connectivity Checks: "debounce:alarm_btn"
+  9. Analysis & Elaboration Messages
 
 
 
@@ -42,7 +41,7 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                                   ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Elaboration Status      ; Successful - Thu Nov 09 21:44:38 2017       ;
+; Analysis & Elaboration Status      ; Successful - Thu Nov 09 22:54:21 2017       ;
 ; Quartus Prime Version              ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; alarm_clock                                 ;
 ; Top-level Entity Name              ; alarm_clock                                 ;
@@ -161,27 +160,6 @@ agreement for further details.
 +----------------------------------------------------------------------------+--------------------+--------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "clock_display:Display"                                                                                            ;
-+--------------+-------+------------------+----------------------------------------------------------------------------------------------------+
-; Port         ; Type  ; Severity         ; Details                                                                                            ;
-+--------------+-------+------------------+----------------------------------------------------------------------------------------------------+
-; clock        ; Input ; Info             ; Stuck at GND                                                                                       ;
-; hours_tens   ; Bidir ; Warning          ; Stuck at GND                                                                                       ;
-; hours_tens   ; Bidir ; Critical Warning ; Port on prototype, e.g. VHDL component, declared as "Input" but port on entity declared as "Bidir" ;
-; hours_ones   ; Bidir ; Warning          ; Stuck at GND                                                                                       ;
-; hours_ones   ; Bidir ; Critical Warning ; Port on prototype, e.g. VHDL component, declared as "Input" but port on entity declared as "Bidir" ;
-; minutes_tens ; Bidir ; Warning          ; Stuck at GND                                                                                       ;
-; minutes_tens ; Bidir ; Critical Warning ; Port on prototype, e.g. VHDL component, declared as "Input" but port on entity declared as "Bidir" ;
-; minutes_ones ; Bidir ; Warning          ; Stuck at GND                                                                                       ;
-; minutes_ones ; Bidir ; Critical Warning ; Port on prototype, e.g. VHDL component, declared as "Input" but port on entity declared as "Bidir" ;
-; seconds_tens ; Bidir ; Warning          ; Stuck at GND                                                                                       ;
-; seconds_tens ; Bidir ; Critical Warning ; Port on prototype, e.g. VHDL component, declared as "Input" but port on entity declared as "Bidir" ;
-; seconds_ones ; Bidir ; Warning          ; Stuck at GND                                                                                       ;
-; seconds_ones ; Bidir ; Critical Warning ; Port on prototype, e.g. VHDL component, declared as "Input" but port on entity declared as "Bidir" ;
-+--------------+-------+------------------+----------------------------------------------------------------------------------------------------+
-
-
 +---------------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "debounce:min_btn"                                                                        ;
 +-----------+--------+----------+-------------------------------------------------------------------------------------+
@@ -224,7 +202,7 @@ agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
-    Info: Processing started: Thu Nov 09 21:44:25 2017
+    Info: Processing started: Thu Nov 09 22:54:10 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off alarm_clock -c alarm_clock --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -237,9 +215,6 @@ Info (12021): Found 2 design units, including 0 entities, in source file alarm_c
 Info (12021): Found 2 design units, including 1 entities, in source file debounce.vhd
     Info (12022): Found design unit 1: debounce-debounce_arch File: F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/debounce.vhd Line: 11
     Info (12023): Found entity 1: debounce File: F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/debounce.vhd Line: 5
-Info (12021): Found 2 design units, including 1 entities, in source file clock_display.vhd
-    Info (12022): Found design unit 1: clock_display-clock_display_arch File: F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/clock_display.vhd Line: 13
-    Info (12023): Found entity 1: clock_display File: F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/clock_display.vhd Line: 5
 Info (12127): Elaborating entity "alarm_clock" for the top level hierarchy
 Warning (10541): VHDL Signal Declaration warning at alarm_clock.vhd(12): used implicit default value for signal "alarm" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/alarm_clock.vhd Line: 12
 Warning (10541): VHDL Signal Declaration warning at alarm_clock.vhd(13): used implicit default value for signal "am_pm" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/alarm_clock.vhd Line: 13
@@ -247,59 +222,50 @@ Warning (10036): Verilog HDL or VHDL warning at alarm_clock.vhd(28): object "db_
 Warning (10036): Verilog HDL or VHDL warning at alarm_clock.vhd(28): object "db_clock_set" assigned a value but never read File: F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/alarm_clock.vhd Line: 28
 Warning (10036): Verilog HDL or VHDL warning at alarm_clock.vhd(28): object "db_hour_set" assigned a value but never read File: F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/alarm_clock.vhd Line: 28
 Warning (10036): Verilog HDL or VHDL warning at alarm_clock.vhd(28): object "db_minute_set" assigned a value but never read File: F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/alarm_clock.vhd Line: 28
-Warning (10540): VHDL Signal Declaration warning at alarm_clock.vhd(33): used explicit default value for signal "seconds_ones" because signal was never assigned a value File: F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/alarm_clock.vhd Line: 33
-Warning (10540): VHDL Signal Declaration warning at alarm_clock.vhd(33): used explicit default value for signal "seconds_tens" because signal was never assigned a value File: F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/alarm_clock.vhd Line: 33
-Warning (10540): VHDL Signal Declaration warning at alarm_clock.vhd(33): used explicit default value for signal "minutes_ones" because signal was never assigned a value File: F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/alarm_clock.vhd Line: 33
-Warning (10540): VHDL Signal Declaration warning at alarm_clock.vhd(33): used explicit default value for signal "minutes_tens" because signal was never assigned a value File: F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/alarm_clock.vhd Line: 33
-Warning (10540): VHDL Signal Declaration warning at alarm_clock.vhd(33): used explicit default value for signal "hours_ones" because signal was never assigned a value File: F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/alarm_clock.vhd Line: 33
-Warning (10540): VHDL Signal Declaration warning at alarm_clock.vhd(33): used explicit default value for signal "hours_tens" because signal was never assigned a value File: F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/alarm_clock.vhd Line: 33
-Info (12128): Elaborating entity "debounce" for hierarchy "debounce:alarm_btn" File: F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/alarm_clock.vhd Line: 43
+Warning (10036): Verilog HDL or VHDL warning at alarm_clock.vhd(34): object "clock_time" assigned a value but never read File: F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/alarm_clock.vhd Line: 34
+Warning (10540): VHDL Signal Declaration warning at alarm_clock.vhd(36): used explicit default value for signal "alarm_minutes_ones" because signal was never assigned a value File: F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/alarm_clock.vhd Line: 36
+Warning (10540): VHDL Signal Declaration warning at alarm_clock.vhd(36): used explicit default value for signal "alarm_minutes_tens" because signal was never assigned a value File: F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/alarm_clock.vhd Line: 36
+Warning (10540): VHDL Signal Declaration warning at alarm_clock.vhd(36): used explicit default value for signal "alarm_hours_ones" because signal was never assigned a value File: F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/alarm_clock.vhd Line: 36
+Warning (10540): VHDL Signal Declaration warning at alarm_clock.vhd(36): used explicit default value for signal "alarm_hours_tens" because signal was never assigned a value File: F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/alarm_clock.vhd Line: 36
+Warning (10036): Verilog HDL or VHDL warning at alarm_clock.vhd(38): object "alarm_time" assigned a value but never read File: F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/alarm_clock.vhd Line: 38
+Warning (10492): VHDL Process Statement warning at alarm_clock.vhd(61): signal "hours_tens" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/alarm_clock.vhd Line: 61
+Warning (10492): VHDL Process Statement warning at alarm_clock.vhd(61): signal "hours_ones" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/alarm_clock.vhd Line: 61
+Warning (10492): VHDL Process Statement warning at alarm_clock.vhd(61): signal "minutes_tens" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/alarm_clock.vhd Line: 61
+Warning (10492): VHDL Process Statement warning at alarm_clock.vhd(61): signal "minutes_ones" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/alarm_clock.vhd Line: 61
+Warning (10492): VHDL Process Statement warning at alarm_clock.vhd(61): signal "seconds_tens" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/alarm_clock.vhd Line: 61
+Warning (10492): VHDL Process Statement warning at alarm_clock.vhd(61): signal "seconds_ones" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/alarm_clock.vhd Line: 61
+Warning (10631): VHDL Process Statement warning at alarm_clock.vhd(59): inferring latch(es) for signal or variable "hours_tens", which holds its previous value in one or more paths through the process File: F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/alarm_clock.vhd Line: 59
+Warning (10631): VHDL Process Statement warning at alarm_clock.vhd(59): inferring latch(es) for signal or variable "hours_ones", which holds its previous value in one or more paths through the process File: F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/alarm_clock.vhd Line: 59
+Warning (10631): VHDL Process Statement warning at alarm_clock.vhd(59): inferring latch(es) for signal or variable "minutes_tens", which holds its previous value in one or more paths through the process File: F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/alarm_clock.vhd Line: 59
+Warning (10631): VHDL Process Statement warning at alarm_clock.vhd(59): inferring latch(es) for signal or variable "minutes_ones", which holds its previous value in one or more paths through the process File: F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/alarm_clock.vhd Line: 59
+Warning (10631): VHDL Process Statement warning at alarm_clock.vhd(59): inferring latch(es) for signal or variable "seconds_tens", which holds its previous value in one or more paths through the process File: F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/alarm_clock.vhd Line: 59
+Info (10041): Inferred latch for "seconds_tens[0]" at alarm_clock.vhd(59) File: F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/alarm_clock.vhd Line: 59
+Info (10041): Inferred latch for "seconds_tens[1]" at alarm_clock.vhd(59) File: F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/alarm_clock.vhd Line: 59
+Info (10041): Inferred latch for "seconds_tens[2]" at alarm_clock.vhd(59) File: F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/alarm_clock.vhd Line: 59
+Info (10041): Inferred latch for "seconds_tens[3]" at alarm_clock.vhd(59) File: F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/alarm_clock.vhd Line: 59
+Info (10041): Inferred latch for "minutes_ones[0]" at alarm_clock.vhd(59) File: F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/alarm_clock.vhd Line: 59
+Info (10041): Inferred latch for "minutes_ones[1]" at alarm_clock.vhd(59) File: F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/alarm_clock.vhd Line: 59
+Info (10041): Inferred latch for "minutes_ones[2]" at alarm_clock.vhd(59) File: F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/alarm_clock.vhd Line: 59
+Info (10041): Inferred latch for "minutes_ones[3]" at alarm_clock.vhd(59) File: F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/alarm_clock.vhd Line: 59
+Info (10041): Inferred latch for "minutes_tens[0]" at alarm_clock.vhd(59) File: F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/alarm_clock.vhd Line: 59
+Info (10041): Inferred latch for "minutes_tens[1]" at alarm_clock.vhd(59) File: F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/alarm_clock.vhd Line: 59
+Info (10041): Inferred latch for "minutes_tens[2]" at alarm_clock.vhd(59) File: F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/alarm_clock.vhd Line: 59
+Info (10041): Inferred latch for "minutes_tens[3]" at alarm_clock.vhd(59) File: F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/alarm_clock.vhd Line: 59
+Info (10041): Inferred latch for "hours_ones[0]" at alarm_clock.vhd(59) File: F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/alarm_clock.vhd Line: 59
+Info (10041): Inferred latch for "hours_ones[1]" at alarm_clock.vhd(59) File: F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/alarm_clock.vhd Line: 59
+Info (10041): Inferred latch for "hours_ones[2]" at alarm_clock.vhd(59) File: F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/alarm_clock.vhd Line: 59
+Info (10041): Inferred latch for "hours_ones[3]" at alarm_clock.vhd(59) File: F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/alarm_clock.vhd Line: 59
+Info (10041): Inferred latch for "hours_tens[0]" at alarm_clock.vhd(59) File: F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/alarm_clock.vhd Line: 59
+Info (10041): Inferred latch for "hours_tens[1]" at alarm_clock.vhd(59) File: F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/alarm_clock.vhd Line: 59
+Info (10041): Inferred latch for "hours_tens[2]" at alarm_clock.vhd(59) File: F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/alarm_clock.vhd Line: 59
+Info (10041): Inferred latch for "hours_tens[3]" at alarm_clock.vhd(59) File: F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/alarm_clock.vhd Line: 59
+Info (12128): Elaborating entity "debounce" for hierarchy "debounce:alarm_btn" File: F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/alarm_clock.vhd Line: 50
 Warning (10631): VHDL Process Statement warning at debounce.vhd(17): inferring latch(es) for signal or variable "old_btn", which holds its previous value in one or more paths through the process File: F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/debounce.vhd Line: 17
 Info (10041): Inferred latch for "old_btn" at debounce.vhd(23) File: F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/debounce.vhd Line: 23
-Info (12128): Elaborating entity "clock_display" for hierarchy "clock_display:Display" File: F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/alarm_clock.vhd Line: 53
-Warning (10492): VHDL Process Statement warning at clock_display.vhd(19): signal "seconds_ones" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/clock_display.vhd Line: 19
-Warning (10492): VHDL Process Statement warning at clock_display.vhd(20): signal "seconds_ones" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/clock_display.vhd Line: 20
-Warning (10492): VHDL Process Statement warning at clock_display.vhd(22): signal "seconds_tens" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/clock_display.vhd Line: 22
-Warning (10492): VHDL Process Statement warning at clock_display.vhd(23): signal "seconds_tens" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/clock_display.vhd Line: 23
-Warning (10492): VHDL Process Statement warning at clock_display.vhd(25): signal "minutes_ones" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/clock_display.vhd Line: 25
-Warning (10492): VHDL Process Statement warning at clock_display.vhd(26): signal "minutes_ones" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/clock_display.vhd Line: 26
-Warning (10492): VHDL Process Statement warning at clock_display.vhd(28): signal "minutes_tens" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/clock_display.vhd Line: 28
-Warning (10492): VHDL Process Statement warning at clock_display.vhd(29): signal "minutes_tens" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/clock_display.vhd Line: 29
-Warning (10492): VHDL Process Statement warning at clock_display.vhd(31): signal "hours_ones" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/clock_display.vhd Line: 31
-Warning (10492): VHDL Process Statement warning at clock_display.vhd(32): signal "hours_ones" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/clock_display.vhd Line: 32
-Warning (10492): VHDL Process Statement warning at clock_display.vhd(34): signal "hours_tens" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/clock_display.vhd Line: 34
-Warning (10492): VHDL Process Statement warning at clock_display.vhd(35): signal "hours_tens" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/clock_display.vhd Line: 35
-Warning (10492): VHDL Process Statement warning at clock_display.vhd(35): signal "hours_ones" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/clock_display.vhd Line: 35
-Warning (10631): VHDL Process Statement warning at clock_display.vhd(17): inferring latch(es) for signal or variable "seconds_tens", which holds its previous value in one or more paths through the process File: F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/clock_display.vhd Line: 17
-Warning (10631): VHDL Process Statement warning at clock_display.vhd(17): inferring latch(es) for signal or variable "minutes_ones", which holds its previous value in one or more paths through the process File: F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/clock_display.vhd Line: 17
-Warning (10631): VHDL Process Statement warning at clock_display.vhd(17): inferring latch(es) for signal or variable "minutes_tens", which holds its previous value in one or more paths through the process File: F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/clock_display.vhd Line: 17
-Warning (10631): VHDL Process Statement warning at clock_display.vhd(17): inferring latch(es) for signal or variable "hours_ones", which holds its previous value in one or more paths through the process File: F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/clock_display.vhd Line: 17
-Warning (10631): VHDL Process Statement warning at clock_display.vhd(17): inferring latch(es) for signal or variable "hours_tens", which holds its previous value in one or more paths through the process File: F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/clock_display.vhd Line: 17
-Info (10041): Inferred latch for "hours_tens[0]" at clock_display.vhd(17) File: F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/clock_display.vhd Line: 17
-Info (10041): Inferred latch for "hours_tens[1]" at clock_display.vhd(17) File: F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/clock_display.vhd Line: 17
-Info (10041): Inferred latch for "hours_tens[2]" at clock_display.vhd(17) File: F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/clock_display.vhd Line: 17
-Info (10041): Inferred latch for "hours_tens[3]" at clock_display.vhd(17) File: F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/clock_display.vhd Line: 17
-Info (10041): Inferred latch for "hours_ones[0]" at clock_display.vhd(17) File: F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/clock_display.vhd Line: 17
-Info (10041): Inferred latch for "hours_ones[1]" at clock_display.vhd(17) File: F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/clock_display.vhd Line: 17
-Info (10041): Inferred latch for "hours_ones[2]" at clock_display.vhd(17) File: F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/clock_display.vhd Line: 17
-Info (10041): Inferred latch for "hours_ones[3]" at clock_display.vhd(17) File: F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/clock_display.vhd Line: 17
-Info (10041): Inferred latch for "minutes_tens[0]" at clock_display.vhd(17) File: F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/clock_display.vhd Line: 17
-Info (10041): Inferred latch for "minutes_tens[1]" at clock_display.vhd(17) File: F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/clock_display.vhd Line: 17
-Info (10041): Inferred latch for "minutes_tens[2]" at clock_display.vhd(17) File: F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/clock_display.vhd Line: 17
-Info (10041): Inferred latch for "minutes_tens[3]" at clock_display.vhd(17) File: F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/clock_display.vhd Line: 17
-Info (10041): Inferred latch for "minutes_ones[0]" at clock_display.vhd(17) File: F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/clock_display.vhd Line: 17
-Info (10041): Inferred latch for "minutes_ones[1]" at clock_display.vhd(17) File: F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/clock_display.vhd Line: 17
-Info (10041): Inferred latch for "minutes_ones[2]" at clock_display.vhd(17) File: F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/clock_display.vhd Line: 17
-Info (10041): Inferred latch for "minutes_ones[3]" at clock_display.vhd(17) File: F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/clock_display.vhd Line: 17
-Info (10041): Inferred latch for "seconds_tens[0]" at clock_display.vhd(17) File: F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/clock_display.vhd Line: 17
-Info (10041): Inferred latch for "seconds_tens[1]" at clock_display.vhd(17) File: F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/clock_display.vhd Line: 17
-Info (10041): Inferred latch for "seconds_tens[2]" at clock_display.vhd(17) File: F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/clock_display.vhd Line: 17
-Info (10041): Inferred latch for "seconds_tens[3]" at clock_display.vhd(17) File: F:/New Schoolwork/Fall 2017/VHDL/Proj3_Katelyn_Charbonneau/alarm_clock/clock_display.vhd Line: 17
-Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
-Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 33 warnings
-    Info: Peak virtual memory: 666 megabytes
-    Info: Processing ended: Thu Nov 09 21:44:38 2017
-    Info: Elapsed time: 00:00:13
-    Info: Total CPU time (on all processors): 00:00:22
+Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 25 warnings
+    Info: Peak virtual memory: 662 megabytes
+    Info: Processing ended: Thu Nov 09 22:54:21 2017
+    Info: Elapsed time: 00:00:11
+    Info: Total CPU time (on all processors): 00:00:20
 
 

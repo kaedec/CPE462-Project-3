@@ -30,14 +30,21 @@ SIGNAL db_alarm_set, db_clock_set, db_hour_set, db_minute_set: STD_LOGIC;
 CONSTANT divider: NATURAL := 25000000; --1Hz (1s)
 SIGNAL clock_1Hz: STD_LOGIC;
 
-SIGNAL seconds_ones, seconds_tens,
-			minutes_ones, minutes_tens,
-			hours_ones, hours_tens: NATURAL := 0;
+SIGNAL hours_tens, hours_ones, minutes_tens, minutes_ones, seconds_tens, seconds_ones: NATURAL RANGE 0 TO 9 := 0;
+SIGNAL clock_time: my_time;
+			
+SIGNAL alarm_minutes_ones, alarm_minutes_tens,
+			alarm_hours_ones, alarm_hours_tens: NATURAL RANGE 0 TO 9 := 0;
+SIGNAL alarm_time: my_time;
 
 -------------------------------------------------------------------------------
 --BEHAVIOR
 
 BEGIN
+
+--Make clock arrays
+clock_time <= (hours_tens, hours_ones, minutes_tens, minutes_ones, seconds_tens, seconds_ones);
+alarm_time <= (alarm_hours_tens, alarm_hours_ones, alarm_minutes_tens, alarm_minutes_ones, 0, 0);
 
 --Debounce the push buttons
 alarm_btn: debounce PORT MAP (alarm_set, clock_50MHz, db_alarm_set);
@@ -48,13 +55,17 @@ min_btn: debounce PORT MAP (minute_set, clock_50MHz, db_minute_set);
 --Produce a clk of Frequency 1Hz (1s)
 slow_the_clock(clock_50MHz, reset, divider, clock_1Hz);
 
+--Define clock behavior
+PROCESS(clock_1Hz, reset, db_alarm_set, db_clock_set)
+BEGIN
+clock_display(clock_1Hz, hours_tens, hours_ones, minutes_tens, minutes_ones, seconds_tens, seconds_ones);
 
+IF (reset = '1') THEN
+	clock_time <= (1, 2, 0, 0, 0, 0);
+	alarm_time <= (1, 2, 0, 0, 0, 0);
+END IF;
+END PROCESS;
 
---Define clock display behavior
---THIS INCREASES THE CLOCK OVER TIME
-
-Incrementer: clock_display PORT MAP (clock_1Hz, hours_tens, hours_ones,
-													minutes_tens, minutes_ones, seconds_tens, seconds_ones);
 
 hours7 <= dispSSD(hours_tens);
 hours6 <= dispSSD(hours_ones);
