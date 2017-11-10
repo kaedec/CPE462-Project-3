@@ -1,0 +1,24 @@
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+
+ENTITY clock_display IS
+
+	PORT(hours_tens, hours_ones,
+			minutes_tens, minutes_ones,
+			seconds_tens, seconds_ones: IN NATURAL;
+			hours7, hours6: OUT STD_LOGIC_VECTOR(0 TO 6); --SSD for hours
+			minutes5, minutes4: OUT STD_LOGIC_VECTOR(0 TO 6); --SSD for minutes
+			seconds3, seconds2: OUT STD_LOGIC_VECTOR(0 TO 6)); --SSD for seconds
+END ;
+
+ARCHITECTURE  OF  IS
+BEGIN
+
+
+PROCESS(clock_1Hz)
+	seconds_ones <= seconds_ones+1;
+	IF(seconds_ones >= 9) THEN
+		seconds_ones <= 0;
+		seconds_tens <= seconds_tens+1;
+
+END ;

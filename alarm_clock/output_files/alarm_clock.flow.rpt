@@ -1,5 +1,5 @@
 Flow report for alarm_clock
-Thu Nov 09 18:07:37 2017
+Thu Nov 09 21:44:38 2017
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -41,7 +41,7 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Thu Nov 09 18:07:37 2017       ;
+; Flow Status                        ; Successful - Thu Nov 09 21:44:38 2017       ;
 ; Quartus Prime Version              ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; alarm_clock                                 ;
 ; Top-level Entity Name              ; alarm_clock                                 ;
@@ -65,7 +65,7 @@ agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/09/2017 18:07:27 ;
+; Start date & time ; 11/09/2017 21:44:26 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; alarm_clock         ;
 +-------------------+---------------------+
@@ -76,7 +76,7 @@ agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 84440835730558.151026884703640         ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 84440835730558.151028186607324         ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --         ;
 ; NOMINAL_CORE_SUPPLY_VOLTAGE         ; 1.2V                                   ; --            ; --          ; --         ;
@@ -94,8 +94,8 @@ agreement for further details.
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name            ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Elaboration ; 00:00:11     ; 1.0                     ; 662 MB              ; 00:00:20                           ;
-; Total                  ; 00:00:11     ; --                      ; --                  ; 00:00:20                           ;
+; Analysis & Elaboration ; 00:00:13     ; 1.0                     ; 666 MB              ; 00:00:22                           ;
+; Total                  ; 00:00:13     ; --                      ; --                  ; 00:00:22                           ;
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
