@@ -178,6 +178,22 @@
 				{
 					"name" : "clock_50MHz",
 					"strict" : false
+				},
+				{
+					"name" : "reset",
+					"strict" : false
+				},
+				{
+					"name" : "alarm_set",
+					"strict" : false
+				},
+				{
+					"name" : "hour_set",
+					"strict" : false
+				},
+				{
+					"name" : "minute_set",
+					"strict" : false
 				}
 			]
 		}

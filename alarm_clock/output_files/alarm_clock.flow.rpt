@@ -1,5 +1,5 @@
 Flow report for alarm_clock
-Fri Nov 10 11:32:46 2017
+Sat Nov 11 15:30:07 2017
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -41,17 +41,17 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Fri Nov 10 11:32:38 2017       ;
+; Flow Status                        ; Successful - Sat Nov 11 15:29:57 2017       ;
 ; Quartus Prime Version              ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; alarm_clock                                 ;
 ; Top-level Entity Name              ; alarm_clock                                 ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE115F29C7                               ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 131 / 114,480 ( < 1 % )                     ;
-;     Total combinational functions  ; 131 / 114,480 ( < 1 % )                     ;
-;     Dedicated logic registers      ; 54 / 114,480 ( < 1 % )                      ;
-; Total registers                    ; 54                                          ;
+; Total logic elements               ; 326 / 114,480 ( < 1 % )                     ;
+;     Total combinational functions  ; 323 / 114,480 ( < 1 % )                     ;
+;     Dedicated logic registers      ; 170 / 114,480 ( < 1 % )                     ;
+; Total registers                    ; 170                                         ;
 ; Total pins                         ; 51 / 529 ( 10 % )                           ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0 / 3,981,312 ( 0 % )                       ;
@@ -65,7 +65,7 @@ agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/10/2017 11:31:31 ;
+; Start date & time ; 11/11/2017 15:28:55 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; alarm_clock         ;
 +-------------------+---------------------+
@@ -76,7 +76,7 @@ agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 88623635123884.151033149116200         ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 84440835730558.151043213514552         ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --         ;
 ; NOMINAL_CORE_SUPPLY_VOLTAGE         ; 1.2V                                   ; --            ; --          ; --         ;
@@ -94,11 +94,11 @@ agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:20     ; 1.0                     ; 698 MB              ; 00:00:36                           ;
-; Fitter                    ; 00:00:27     ; 1.0                     ; 1716 MB             ; 00:00:38                           ;
-; Assembler                 ; 00:00:07     ; 1.0                     ; 572 MB              ; 00:00:07                           ;
-; TimeQuest Timing Analyzer ; 00:00:06     ; 1.0                     ; 755 MB              ; 00:00:04                           ;
-; Total                     ; 00:01:00     ; --                      ; --                  ; 00:01:25                           ;
+; Analysis & Synthesis      ; 00:00:17     ; 1.0                     ; 680 MB              ; 00:00:22                           ;
+; Fitter                    ; 00:00:22     ; 1.0                     ; 1587 MB             ; 00:00:21                           ;
+; Assembler                 ; 00:00:05     ; 1.0                     ; 572 MB              ; 00:00:03                           ;
+; TimeQuest Timing Analyzer ; 00:00:08     ; 1.0                     ; 729 MB              ; 00:00:02                           ;
+; Total                     ; 00:00:52     ; --                      ; --                  ; 00:00:48                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -107,10 +107,10 @@ agreement for further details.
 +---------------------------+------------------+------------+------------+----------------+
 ; Module Name               ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
 +---------------------------+------------------+------------+------------+----------------+
-; Analysis & Synthesis      ; PC4585           ; Windows 10 ; 10.0       ; x86_64         ;
-; Fitter                    ; PC4585           ; Windows 10 ; 10.0       ; x86_64         ;
-; Assembler                 ; PC4585           ; Windows 10 ; 10.0       ; x86_64         ;
-; TimeQuest Timing Analyzer ; PC4585           ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis      ; Katelyn-PC       ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter                    ; Katelyn-PC       ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler                 ; Katelyn-PC       ; Windows 10 ; 10.0       ; x86_64         ;
+; TimeQuest Timing Analyzer ; Katelyn-PC       ; Windows 10 ; 10.0       ; x86_64         ;
 +---------------------------+------------------+------------+------------+----------------+
 
 

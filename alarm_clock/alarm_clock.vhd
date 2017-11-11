@@ -29,8 +29,13 @@ SIGNAL db_alarm_set, db_clock_set, db_hour_set, db_minute_set: STD_LOGIC;
 
 CONSTANT divider: NATURAL := 12500; --1Hz (1s)
 SIGNAL clock_1Hz: STD_LOGIC := '0';
+SIGNAL meridiem: STD_LOGIC := '0';
+SIGNAL meridiem_alarm: STD_LOGIC := '0';
 
 --Values for the clock time
+SIGNAL clock_hours_tens, clock_hours_ones, clock_minutes_tens, clock_minutes_ones,
+			clock_seconds_tens, clock_seconds_ones: NATURAL RANGE 0 TO 9 := 0;
+			
 SIGNAL hours_tens, hours_ones, minutes_tens, minutes_ones,
 			seconds_tens, seconds_ones: NATURAL RANGE 0 TO 9 := 0;
 
@@ -38,6 +43,14 @@ SIGNAL hours_tens, hours_ones, minutes_tens, minutes_ones,
 SIGNAL alarm_minutes_ones, alarm_minutes_tens,
 			alarm_hours_ones, alarm_hours_tens,
 			alarm_seconds_ones, alarm_seconds_tens: NATURAL RANGE 0 TO 9 := 0;
+			
+SIGNAL alarm_minutes_ones_process1, alarm_minutes_tens_process1,
+			alarm_hours_ones_process1, alarm_hours_tens_process1,
+			alarm_seconds_ones_process1, alarm_seconds_tens_process1: NATURAL RANGE 0 TO 9 := 0;
+			
+SIGNAL alarm_minutes_ones_process2, alarm_minutes_tens_process2,
+			alarm_hours_ones_process2, alarm_hours_tens_process2,
+			alarm_seconds_ones_process2, alarm_seconds_tens_process2: NATURAL RANGE 0 TO 9 := 0;
 
 -------------------------------------------------------------------------------
 --BEHAVIOR
@@ -55,7 +68,7 @@ hour_btn: debounce PORT MAP (hour_set, clock_50MHz, db_hour_set);
 min_btn: debounce PORT MAP (minute_set, clock_50MHz, db_minute_set);
 
 --Define clock behavior
-PROCESS(clock_50MHz, reset, db_alarm_set, db_clock_set)
+PRODUCE_CLOCK: PROCESS(clock_50MHz, reset)
 VARIABLE counter: NATURAL;
 
 BEGIN
@@ -66,10 +79,62 @@ IF rise_edge(clock_50MHz) THEN
 		counter := 0;
 		clock_1Hz <= NOT clock_1Hz;
 		IF clock_1Hz='0' THEN
-			clock_increment(hours_tens, hours_ones, minutes_tens, minutes_ones, seconds_tens, seconds_ones);
+			clock_increment(meridiem, clock_hours_tens, clock_hours_ones, clock_minutes_tens, clock_minutes_ones, clock_seconds_tens, clock_seconds_ones);
 		END IF;
 	END IF;
 END IF;
+
+IF reset='1' THEN
+	counter := 0;
+	clock_hours_tens <= 1;		--alarm_hours_tens_process1 <= 1;
+	clock_hours_ones <= 2;		--alarm_hours_ones_process1 <= 2;
+	clock_minutes_tens <= 0;	--alarm_minutes_tens_process1 <= 0;
+	clock_minutes_ones <= 0;	--alarm_minutes_ones_process1 <= 0;
+	clock_seconds_tens <= 0;	--alarm_seconds_tens_process1 <= 0;
+	clock_seconds_ones <= 0;	--alarm_seconds_ones_process1 <= 0;
+	meridiem <= '0';
+END IF;
+
+END PROCESS;
+						
+SET_ALARM: PROCESS(clock_50MHz, db_hour_set, db_minute_set)
+BEGIN
+	IF (db_alarm_set='0') THEN
+		IF fall_edge(db_hour_set) THEN
+			alarm_hr_inc(meridiem_alarm, alarm_hours_tens, alarm_hours_ones);
+		END IF;
+		IF fall_edge(db_minute_set) THEN
+			alarm_mn_inc(alarm_minutes_tens, alarm_minutes_ones);
+		END IF;
+	END IF;
+	
+	IF reset = '1' THEN
+		alarm_hours_tens <= 1;
+		alarm_hours_ones <= 2;
+		alarm_minutes_tens<= 0;
+		alarm_minutes_ones <= 0;
+		alarm_seconds_tens <= 0;
+		alarm_seconds_ones <= 0;
+	END IF;
+END PROCESS;
+
+hours_tens <= alarm_hours_tens WHEN db_alarm_set = '0' ELSE
+					clock_hours_tens;
+					
+hours_ones <= alarm_hours_ones WHEN db_alarm_set = '0' ELSE
+					clock_hours_ones;
+					
+minutes_tens <= alarm_minutes_tens WHEN db_alarm_set = '0' ELSE
+						clock_minutes_tens;
+						
+minutes_ones <= alarm_minutes_ones WHEN db_alarm_set = '0' ELSE
+						clock_minutes_ones;
+						
+seconds_tens <= alarm_seconds_tens WHEN db_alarm_set = '0' ELSE
+						clock_seconds_tens;
+						
+seconds_ones <= alarm_seconds_ones WHEN db_alarm_set = '0' ELSE
+						clock_seconds_ones;
 
 hours7 <= dispSSD(hours_tens);
 hours6 <= dispSSD(hours_ones);
@@ -78,8 +143,7 @@ minutes4 <= dispSSD(minutes_ones);
 seconds3 <= dispSSD(seconds_tens);
 seconds2 <= dispSSD(seconds_ones);
 
-END PROCESS;
-
-am_pm <= clock_1Hz;
+am_pm <= meridiem_alarm WHEN db_alarm_set = '0' ELSE
+			meridiem;
 
 END alarm_clock_arch;

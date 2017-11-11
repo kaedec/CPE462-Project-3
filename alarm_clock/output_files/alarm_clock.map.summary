@@ -1,12 +1,12 @@
-Analysis & Synthesis Status : Successful - Fri Nov 10 11:31:51 2017
+Analysis & Synthesis Status : Successful - Sat Nov 11 15:29:14 2017
 Quartus Prime Version : 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 Revision Name : alarm_clock
 Top-level Entity Name : alarm_clock
 Family : Cyclone IV E
-Total logic elements : 131
-    Total combinational functions : 131
-    Dedicated logic registers : 54
-Total registers : 54
+Total logic elements : 323
+    Total combinational functions : 323
+    Dedicated logic registers : 170
+Total registers : 170
 Total pins : 51
 Total virtual pins : 0
 Total memory bits : 0

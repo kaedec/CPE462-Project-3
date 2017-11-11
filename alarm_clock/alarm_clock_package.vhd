@@ -14,13 +14,21 @@ PACKAGE alarm_clock_package IS
 -------------------------------------------------------------------------------	
 	FUNCTION rise_edge (SIGNAL CLK: STD_LOGIC) RETURN BOOLEAN;
 -------------------------------------------------------------------------------
+	FUNCTION fall_edge (SIGNAL CLK: STD_LOGIC) RETURN BOOLEAN;
+-------------------------------------------------------------------------------
 	PROCEDURE slow_the_clock (SIGNAL ip_clock, rst: IN STD_LOGIC;
 										CONSTANT divider: IN NATURAL;
 										SIGNAL op_clock: OUT STD_LOGIC);
 -------------------------------------------------------------------------------
-	PROCEDURE clock_increment (SIGNAL hours_tens, hours_ones,
+	PROCEDURE clock_increment (SIGNAL meridiem: INOUT STD_LOGIC;
+										SIGNAL hours_tens, hours_ones,
 										minutes_tens, minutes_ones,
 										seconds_tens, seconds_ones: INOUT NATURAL RANGE 0 TO 9);
+-------------------------------------------------------------------------------
+	PROCEDURE alarm_hr_inc (SIGNAL meridiem_alarm: INOUT STD_LOGIC;
+									SIGNAL alarm_hours_tens, alarm_hours_ones: INOUT NATURAL RANGE 0 TO 9);
+-------------------------------------------------------------------------------
+	PROCEDURE alarm_mn_inc (SIGNAL alarm_minutes_tens, alarm_minutes_ones: INOUT NATURAL RANGE 0 TO 9);
 -------------------------------------------------------------------------------
 END alarm_clock_package;
 
@@ -57,6 +65,14 @@ PACKAGE BODY alarm_clock_package IS
 	
 	END FUNCTION rise_edge;
 -------------------------------------------------------------------------------
+	FUNCTION fall_edge (SIGNAL CLK: STD_LOGIC) RETURN BOOLEAN IS
+	
+	BEGIN
+	
+	RETURN (CLK'EVENT AND CLK='0');
+	
+	END FUNCTION fall_edge;
+-------------------------------------------------------------------------------
 	PROCEDURE slow_the_clock (SIGNAL ip_clock, rst: IN STD_LOGIC;
 										CONSTANT divider: IN NATURAL;
 										SIGNAL op_clock: OUT STD_LOGIC) IS
@@ -79,7 +95,8 @@ PACKAGE BODY alarm_clock_package IS
 	
 	END PROCEDURE slow_the_clock;
 -------------------------------------------------------------------------------
-	PROCEDURE clock_increment (SIGNAL hours_tens, hours_ones,
+	PROCEDURE clock_increment (SIGNAL meridiem: INOUT STD_LOGIC;
+										SIGNAL hours_tens, hours_ones,
 										minutes_tens, minutes_ones,
 										seconds_tens, seconds_ones: INOUT NATURAL RANGE 0 TO 9) IS
 
@@ -101,9 +118,12 @@ PACKAGE BODY alarm_clock_package IS
 						hours_ones <= 0;
 						hours_tens <= hours_tens+1;
 					END IF;
-					IF(hours_tens >= 2 AND hours_ones >= 3) THEN
+					IF(hours_tens >= 1 AND hours_ones = 2) THEN
 						hours_tens <= 0;
-						hours_ones <= 0;
+						hours_ones <= 1;
+					END IF;
+					IF(hours_tens >= 1 AND hours_ones = 1) THEN
+						meridiem <= NOT meridiem;
 					END IF;
 				END IF;
 			END IF;
@@ -111,5 +131,36 @@ PACKAGE BODY alarm_clock_package IS
 	END IF;
 	
 	END clock_increment;
+-------------------------------------------------------------------------------
+	PROCEDURE alarm_hr_inc (SIGNAL meridiem_alarm: INOUT STD_LOGIC;
+									SIGNAL alarm_hours_tens, alarm_hours_ones: INOUT NATURAL RANGE 0 TO 9) IS
+
+	BEGIN
+		alarm_hours_ones <= alarm_hours_ones+1;
+		IF(alarm_hours_ones >= 9) THEN
+			alarm_hours_ones <= 0;
+			alarm_hours_tens <= alarm_hours_tens+1;
+		END IF;
+		IF(alarm_hours_tens >= 1 AND alarm_hours_ones = 2) THEN
+			alarm_hours_tens <= 0;
+			alarm_hours_ones <= 1;
+		END IF;
+		IF(alarm_hours_tens >= 1 AND alarm_hours_ones = 1) THEN
+			meridiem_alarm <= NOT meridiem_alarm;
+		END IF;
+	END alarm_hr_inc;
+-------------------------------------------------------------------------------
+	PROCEDURE alarm_mn_inc (SIGNAL alarm_minutes_tens, alarm_minutes_ones: INOUT NATURAL RANGE 0 TO 9) IS
+
+	BEGIN
+		alarm_minutes_ones <= alarm_minutes_ones+1;
+		IF(alarm_minutes_ones >= 9) THEN
+			alarm_minutes_ones <= 0;
+			alarm_minutes_tens <= alarm_minutes_tens+1;
+			IF(alarm_minutes_tens >= 5) THEN
+				alarm_minutes_tens <= 0;
+			END IF;
+		END IF;
+	END alarm_mn_inc;
 -------------------------------------------------------------------------------
 END alarm_clock_package;
