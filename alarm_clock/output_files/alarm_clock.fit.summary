@@ -1,12 +1,12 @@
-Fitter Status : Successful - Sun Nov 12 11:35:17 2017
+Fitter Status : Successful - Sun Nov 12 12:55:41 2017
 Quartus Prime Version : 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 Revision Name : alarm_clock
 Top-level Entity Name : alarm_clock
 Family : Cyclone IV E
 Device : EP4CE115F29C7
 Timing Models : Final
-Total logic elements : 393 / 114,480 ( < 1 % )
-    Total combinational functions : 390 / 114,480 ( < 1 % )
+Total logic elements : 403 / 114,480 ( < 1 % )
+    Total combinational functions : 400 / 114,480 ( < 1 % )
     Dedicated logic registers : 205 / 114,480 ( < 1 % )
 Total registers : 205
 Total pins : 51 / 529 ( 10 % )

@@ -4,6 +4,10 @@
 			"name" : "Top",
 			"pins" : [
 				{
+					"name" : "alarm",
+					"strict" : false
+				},
+				{
 					"name" : "am_pm",
 					"strict" : false
 				},
@@ -173,6 +177,10 @@
 				},
 				{
 					"name" : "seconds2[0]",
+					"strict" : false
+				},
+				{
+					"name" : "alarm_status",
 					"strict" : false
 				},
 				{

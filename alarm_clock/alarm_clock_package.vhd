@@ -16,6 +16,10 @@ PACKAGE alarm_clock_package IS
 -------------------------------------------------------------------------------
 	FUNCTION fall_edge (SIGNAL CLK: STD_LOGIC) RETURN BOOLEAN;
 -------------------------------------------------------------------------------
+	FUNCTION test_alarm (SIGNAL enable, mer1, mer2: STD_LOGIC;
+								SIGNAL h1, h2, h3, h4,
+								m1, m2, m3, m4: NATURAL RANGE 0 TO 9) RETURN STD_LOGIC;
+-------------------------------------------------------------------------------
 	PROCEDURE slow_the_clock (SIGNAL ip_clock, rst: IN STD_LOGIC;
 										CONSTANT divider: IN NATURAL;
 										SIGNAL op_clock: OUT STD_LOGIC);
@@ -72,6 +76,18 @@ PACKAGE BODY alarm_clock_package IS
 	RETURN (CLK'EVENT AND CLK='0');
 	
 	END FUNCTION fall_edge;
+-------------------------------------------------------------------------------
+	FUNCTION test_alarm (SIGNAL enable, mer1, mer2: STD_LOGIC;
+								SIGNAL h1, h2, h3, h4,
+								m1, m2, m3, m4: NATURAL RANGE 0 TO 9) RETURN STD_LOGIC IS
+	BEGIN
+	
+		IF (h1 = h2 AND h3 = h4 AND m1 = m2 AND m3 = m4 AND mer1 = mer2 AND enable = '0') THEN
+			RETURN '1';
+		ELSE
+			RETURN '0';
+		END IF;
+	END FUNCTION test_alarm;
 -------------------------------------------------------------------------------
 	PROCEDURE slow_the_clock (SIGNAL ip_clock, rst: IN STD_LOGIC;
 										CONSTANT divider: IN NATURAL;

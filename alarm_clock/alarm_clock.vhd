@@ -32,6 +32,8 @@ SIGNAL clock_1Hz: STD_LOGIC := '0';
 SIGNAL meridiem: STD_LOGIC := '0';
 SIGNAL meridiem_alarm: STD_LOGIC := '0';
 
+SIGNAL alarm_enable: STD_LOGIC := '1';
+
 SIGNAL hour_set_change, minute_set_change: STD_LOGIC := '1';
 
 --Values for the clock time
@@ -151,6 +153,12 @@ BEGIN
 	END IF;
 END PROCESS;
 
+alarm <= test_alarm(alarm_status, meridiem, meridiem_alarm,
+							clock_hours_tens, alarm_hours_tens,
+							clock_hours_ones, alarm_hours_ones,
+							clock_minutes_tens, alarm_minutes_tens,
+							clock_minutes_ones, alarm_minutes_ones);
+							
 hours_tens <= alarm_hours_tens WHEN db_alarm_set = '0' ELSE
 					clock_hours_tens;
 					
