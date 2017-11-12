@@ -180,11 +180,15 @@
 					"strict" : false
 				},
 				{
+					"name" : "alarm_set",
+					"strict" : false
+				},
+				{
 					"name" : "reset",
 					"strict" : false
 				},
 				{
-					"name" : "alarm_set",
+					"name" : "clock_set",
 					"strict" : false
 				},
 				{
