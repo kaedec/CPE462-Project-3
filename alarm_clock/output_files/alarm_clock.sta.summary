@@ -3,72 +3,72 @@ TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1200mV 85C Model Setup 'clock_50MHz'
-Slack : -7.158
-TNS   : -485.674
-
-Type  : Slow 1200mV 85C Model Setup 'debounce:min_btn|debounced'
-Slack : -1.586
-TNS   : -9.198
+Slack : -6.829
+TNS   : -488.739
 
 Type  : Slow 1200mV 85C Model Setup 'debounce:hour_btn|debounced'
-Slack : -1.557
-TNS   : -11.847
+Slack : -1.782
+TNS   : -14.050
 
 Type  : Slow 1200mV 85C Model Setup 'clock_set'
-Slack : -1.497
-TNS   : -1.497
+Slack : -1.543
+TNS   : -1.543
 
-Type  : Slow 1200mV 85C Model Setup 'alarm_set'
-Slack : -1.484
-TNS   : -1.484
+Type  : Slow 1200mV 85C Model Setup 'debounce:min_btn|debounced'
+Slack : -1.462
+TNS   : -8.310
 
 Type  : Slow 1200mV 85C Model Setup 'hour_set'
-Slack : -1.274
-TNS   : -1.274
+Slack : -1.341
+TNS   : -1.341
+
+Type  : Slow 1200mV 85C Model Setup 'alarm_set'
+Slack : -0.971
+TNS   : -0.971
 
 Type  : Slow 1200mV 85C Model Setup 'minute_set'
-Slack : -1.101
-TNS   : -1.101
+Slack : -0.001
+TNS   : -0.001
 
-Type  : Slow 1200mV 85C Model Hold 'alarm_set'
-Slack : 0.306
+Type  : Slow 1200mV 85C Model Hold 'minute_set'
+Slack : -0.315
+TNS   : -0.315
+
+Type  : Slow 1200mV 85C Model Hold 'clock_50MHz'
+Slack : 0.385
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'debounce:hour_btn|debounced'
-Slack : 0.391
-TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Hold 'clock_50MHz'
-Slack : 0.402
-TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Hold 'debounce:min_btn|debounced'
 Slack : 0.406
 TNS   : 0.000
 
-Type  : Slow 1200mV 85C Model Hold 'minute_set'
-Slack : 0.433
-TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Hold 'clock_set'
-Slack : 0.623
+Type  : Slow 1200mV 85C Model Hold 'debounce:min_btn|debounced'
+Slack : 0.407
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'hour_set'
-Slack : 0.656
+Slack : 0.408
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'alarm_set'
+Slack : 0.520
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'clock_set'
+Slack : 0.686
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Recovery 'clock_50MHz'
-Slack : -3.181
-TNS   : -382.560
+Slack : -3.039
+TNS   : -377.424
 
 Type  : Slow 1200mV 85C Model Removal 'clock_50MHz'
-Slack : 1.709
+Slack : 1.663
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clock_50MHz'
 Slack : -3.000
-TNS   : -243.295
+TNS   : -245.865
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'alarm_set'
 Slack : -3.000
@@ -95,72 +95,72 @@ Slack : -1.285
 TNS   : -8.995
 
 Type  : Slow 1200mV 0C Model Setup 'clock_50MHz'
-Slack : -6.502
-TNS   : -419.867
-
-Type  : Slow 1200mV 0C Model Setup 'alarm_set'
-Slack : -1.475
-TNS   : -1.475
-
-Type  : Slow 1200mV 0C Model Setup 'clock_set'
-Slack : -1.463
-TNS   : -1.463
-
-Type  : Slow 1200mV 0C Model Setup 'debounce:min_btn|debounced'
-Slack : -1.446
-TNS   : -8.350
+Slack : -6.216
+TNS   : -424.429
 
 Type  : Slow 1200mV 0C Model Setup 'debounce:hour_btn|debounced'
-Slack : -1.367
-TNS   : -10.025
+Slack : -1.601
+TNS   : -12.732
+
+Type  : Slow 1200mV 0C Model Setup 'clock_set'
+Slack : -1.488
+TNS   : -1.488
 
 Type  : Slow 1200mV 0C Model Setup 'hour_set'
-Slack : -1.249
-TNS   : -1.249
+Slack : -1.306
+TNS   : -1.306
+
+Type  : Slow 1200mV 0C Model Setup 'debounce:min_btn|debounced'
+Slack : -1.241
+TNS   : -7.295
+
+Type  : Slow 1200mV 0C Model Setup 'alarm_set'
+Slack : -0.969
+TNS   : -0.969
 
 Type  : Slow 1200mV 0C Model Setup 'minute_set'
-Slack : -1.039
-TNS   : -1.039
+Slack : -0.023
+TNS   : -0.023
 
-Type  : Slow 1200mV 0C Model Hold 'alarm_set'
-Slack : 0.272
-TNS   : 0.000
-
-Type  : Slow 1200mV 0C Model Hold 'debounce:hour_btn|debounced'
-Slack : 0.341
-TNS   : 0.000
+Type  : Slow 1200mV 0C Model Hold 'minute_set'
+Slack : -0.295
+TNS   : -0.295
 
 Type  : Slow 1200mV 0C Model Hold 'clock_50MHz'
-Slack : 0.354
+Slack : 0.338
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'debounce:min_btn|debounced'
+Slack : 0.357
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'debounce:hour_btn|debounced'
 Slack : 0.358
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Hold 'minute_set'
-Slack : 0.385
+Type  : Slow 1200mV 0C Model Hold 'hour_set'
+Slack : 0.377
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'alarm_set'
+Slack : 0.472
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'clock_set'
-Slack : 0.569
-TNS   : 0.000
-
-Type  : Slow 1200mV 0C Model Hold 'hour_set'
-Slack : 0.595
+Slack : 0.622
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Recovery 'clock_50MHz'
-Slack : -2.894
-TNS   : -348.496
+Slack : -2.759
+TNS   : -343.200
 
 Type  : Slow 1200mV 0C Model Removal 'clock_50MHz'
-Slack : 1.606
+Slack : 1.538
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clock_50MHz'
 Slack : -3.000
-TNS   : -243.295
+TNS   : -245.865
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'alarm_set'
 Slack : -3.000
@@ -187,76 +187,76 @@ Slack : -1.285
 TNS   : -8.995
 
 Type  : Fast 1200mV 0C Model Setup 'clock_50MHz'
-Slack : -3.015
-TNS   : -149.329
-
-Type  : Fast 1200mV 0C Model Setup 'debounce:min_btn|debounced'
-Slack : -0.485
-TNS   : -2.551
+Slack : -2.831
+TNS   : -150.905
 
 Type  : Fast 1200mV 0C Model Setup 'debounce:hour_btn|debounced'
-Slack : -0.315
-TNS   : -2.257
+Slack : -0.666
+TNS   : -4.988
+
+Type  : Fast 1200mV 0C Model Setup 'debounce:min_btn|debounced'
+Slack : -0.359
+TNS   : -1.861
 
 Type  : Fast 1200mV 0C Model Setup 'clock_set'
-Slack : -0.118
-TNS   : -0.118
-
-Type  : Fast 1200mV 0C Model Setup 'alarm_set'
-Slack : -0.035
-TNS   : -0.035
+Slack : -0.138
+TNS   : -0.138
 
 Type  : Fast 1200mV 0C Model Setup 'hour_set'
-Slack : 0.074
+Slack : 0.008
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'alarm_set'
+Slack : 0.167
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Setup 'minute_set'
-Slack : 0.117
+Slack : 0.645
 TNS   : 0.000
 
+Type  : Fast 1200mV 0C Model Hold 'minute_set'
+Slack : -0.134
+TNS   : -0.134
+
+Type  : Fast 1200mV 0C Model Hold 'clock_50MHz'
+Slack : -0.030
+TNS   : -0.030
+
 Type  : Fast 1200mV 0C Model Hold 'debounce:hour_btn|debounced'
-Slack : 0.173
+Slack : 0.181
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'debounce:min_btn|debounced'
 Slack : 0.181
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Hold 'clock_50MHz'
-Slack : 0.182
+Type  : Fast 1200mV 0C Model Hold 'hour_set'
+Slack : 0.273
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'alarm_set'
-Slack : 0.189
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Hold 'minute_set'
-Slack : 0.308
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Hold 'hour_set'
-Slack : 0.369
+Slack : 0.328
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'clock_set'
-Slack : 0.383
+Slack : 0.399
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Recovery 'clock_50MHz'
-Slack : -1.687
-TNS   : -201.504
+Slack : -1.614
+TNS   : -199.184
 
 Type  : Fast 1200mV 0C Model Removal 'clock_50MHz'
-Slack : 0.644
+Slack : 0.621
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clock_50MHz'
 Slack : -3.000
-TNS   : -201.563
+TNS   : -203.737
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'alarm_set'
 Slack : -3.000
-TNS   : -3.010
+TNS   : -3.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clock_set'
 Slack : -3.000
